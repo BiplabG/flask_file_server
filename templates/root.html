@@ -6,9 +6,21 @@
     <body>
         <h1>
             Available Files
-            {% for file in files %}
-            <li><a href="/download/{{ file }}">{{ file }}</a></li>
-            {% endfor %}
         </h1>
+        {% for file in files %}
+            <li><a href="/download/{{ file }}">{{ file }}</a></li>
+        {% endfor %}
+        <br/>
+        <hr/>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="file">Choose file to upload</label>
+                <input type="file" id="file" name="file" multiple>
+              </div>
+              <div>
+                <button>Submit</button>
+              </div>
+        </form>
+
     </body>
 </html>
