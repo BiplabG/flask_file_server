@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic File Sharing Application</title>
+    </head>
+    <body>
+        <h1>
+            Available Files
+            {% for file in files %}
+            <li><a href="/download/{{ file }}">{{ file }}</a></li>
+            {% endfor %}
+        </h1>
+    </body>
+</html>
